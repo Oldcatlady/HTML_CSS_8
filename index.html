@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>html_css</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Klausur<br>Wendler_Web</h1>
+
+    <div class="stats">
+      <div id="progressText">Frage 0 / 0</div>
+      <div id="scoreText">✔ 0 | ❌ 0</div>
+    </div>
+
+    <div class="progress-bar">
+      <div id="progressFill"></div>
+    </div>
+  </header>
+
+  <div id="quizBox">
+
+    <h2 id="questionBox"></h2>
+
+    <!-- WICHTIG: hier kommen die Buttons rein -->
+    <div id="answers"></div>
+
+    <button id="continueBtn">Antwort bestätigen</button>
+
+    <div id="feedback"></div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

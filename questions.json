@@ -1,0 +1,338 @@
+[
+{
+"frage": "Welches Layout beschreibt am besten ein klassisches CSS Grid 2D-Layout?",
+"antworten": [
+"Nur eine vertikale Liste von Elementen",
+"Eine Anordnung nur in einer Zeile",
+"Elemente werden zufällig im Browser verteilt",
+"Elemente werden gleichzeitig in Zeilen und Spalten organisiert",
+"Nur Text wird formatiert"
+],
+"korrekteAntwort": 3,
+"erklaerung": "CSS Grid ist speziell für zweidimensionale Layouts gedacht, bei denen sowohl Zeilen als auch Spalten gleichzeitig gesteuert werden."
+},
+{
+"frage": "Warum ist ein Layout mit Header, Sidebar, Hero, Cards und Footer typischerweise ein Grid-Layout?",
+"antworten": [
+"Weil es nur eine Spalte hat",
+"Weil es nur Text enthält",
+"Weil es keine CSS braucht",
+"Weil mehrere Bereiche gleichzeitig horizontal und vertikal angeordnet werden müssen",
+"Weil Flexbox keine Abstände erlaubt"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Dieses Layout hat mehrere unabhängige Bereiche, die sowohl nebeneinander als auch untereinander angeordnet werden müssen."
+},
+{
+"frage": "Welche Struktur passt am besten zu folgendem Layout?\n\nHeader (voll breit)\nHero links groß\nSidebar rechts\nCards darunter\nFooter unten",
+"antworten": [
+"Einzeilige Flexbox mit row",
+"Mehrere verschachtelte Tabellen",
+"Ein reines Block-Layout ohne CSS",
+"Ein 2D Grid mit definierten Bereichen",
+"Nur absolute Positionierung"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Ein Grid erlaubt es, komplexe Bereiche klar zu strukturieren und gleichzeitig horizontal und vertikal zu steuern."
+},
+{
+"frage": "Warum reicht Flexbox für dieses Layout meist nicht aus?",
+"antworten": [
+"Weil Flexbox keine Farben unterstützt",
+"Weil Flexbox nur mit HTML5 funktioniert",
+"Weil Flexbox nur eine Dimension gleichzeitig steuert",
+"Weil Flexbox keine Container erlaubt",
+"Weil Flexbox automatisch alles zentriert"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Flexbox arbeitet entweder horizontal oder vertikal, nicht beides gleichzeitig. Für komplexe Raster ist Grid besser geeignet."
+},
+{
+"frage": "Welche Denkweise ist bei CSS Grid am wichtigsten?",
+"antworten": [
+"Nur einzelne Elemente stylen",
+"Alles absolut positionieren",
+"Layout zuerst planen, dann Elemente zuordnen",
+"Nur Farben und Schriftarten wählen",
+"HTML ignorieren und nur CSS schreiben"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Grid erfordert ein strukturiertes Denken in Layout-Zonen, bevor einzelne Elemente platziert werden."
+},
+{
+"frage": "Was bedeutet es praktisch, wenn der Header 'über volle Breite' geht?",
+"antworten": [
+"Er wird nur halb so breit wie andere Elemente",
+"Er wird mit flex-grow größer gemacht",
+"Er ignoriert das Grid komplett",
+"Er erstreckt sich über alle Spalten des Grids",
+"Er wird absolut positioniert"
+],
+"korrekteAntwort": 3,
+"erklaerung": "In Grid kann ein Element mehrere Spalten einnehmen, wodurch es über die gesamte Breite des Containers reicht."
+},
+{
+"frage": "Wie wird ein Sidebar-Layout typischerweise im Grid umgesetzt?",
+"antworten": [
+"Sidebar wird unter dem Content platziert",
+"Sidebar wird über flex-direction versteckt",
+"Sidebar wird als separate Webseite geladen",
+"Sidebar wird einer festen Spalte im Grid zugewiesen",
+"Sidebar funktioniert nur mit JavaScript"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Grid erlaubt es, Bereiche wie Sidebar gezielt einer festen Spalte zuzuordnen."
+},
+{
+"frage": "Was ist der Vorteil eines 2D Grid-Denkmodells gegenüber Flexbox?",
+"antworten": [
+"Es ist einfacher für einfache Listen",
+"Es ersetzt HTML komplett",
+"Es erlaubt gleichzeitige Kontrolle von Reihen und Spalten",
+"Es funktioniert nur auf mobilen Geräten",
+"Es ist schneller ohne CSS"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Grid ermöglicht die gleichzeitige Steuerung von horizontalen und vertikalen Layoutachsen."
+},
+{
+"frage": "Du hast folgendes Layout:\n\n.card-wrap {\n display: flex;\n}\n\nDie Karten stehen alle untereinander. Was ist die wahrscheinlichste Ursache?",
+"antworten": [
+"Flexbox funktioniert nur mit Grid kombiniert",
+"Die Karten haben keine Inhalte",
+"display: flex wirkt nur auf Text",
+"Die Standardrichtung ist falsch gesetzt",
+"Flexbox ist im Browser deaktiviert"
+],
+"korrekteAntwort": 1,
+"erklaerung": "Flexbox richtet sich nach Inhalt und verfügbarem Platz. Wenn alles untereinander steht, liegt oft kein erkennbares Layoutproblem vor, sondern ein fehlender oder nicht sichtbarer Effekt durch Struktur oder CSS-Fehlkonfiguration."
+},
+{
+"frage": "Die Karten sollen nebeneinander stehen, brechen aber nicht um. Welche CSS-Eigenschaft fehlt vermutlich?",
+"antworten": [
+"flex-direction: row",
+"flex-wrap: wrap",
+"justify-content: center",
+"align-items: stretch",
+"position: relative"
+],
+"korrekteAntwort": 1,
+"erklaerung": "Ohne flex-wrap bleiben Flex-Items in einer einzigen Zeile und überlaufen den Container, statt in eine neue Zeile zu wechseln."
+},
+{
+"frage": "Die Karten sind nebeneinander, aber sehr unterschiedlich breit. Was ist die wahrscheinlichste Ursache?",
+"antworten": [
+"Die Buttons sind zu groß",
+"Der Container hat keine Breite",
+"Die Karten haben unterschiedliche Inhalte ohne feste oder flexible Breitensteuerung",
+"Flexbox funktioniert nur mit gleichen Elementgrößen",
+"CSS Grid überschreibt Flexbox automatisch"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Ohne einheitliche Breitensteuerung (z. B. flex-basis oder feste width) passen sich Flex-Items ihrem Inhalt an."
+},
+{
+"frage": "Du willst, dass alle Karten gleich groß sind und den Platz gleichmäßig verteilen. Welche Lösung passt am besten?",
+"antworten": [
+"flex: 1",
+"position: absolute",
+"display: block",
+"text-align: center",
+"overflow: hidden"
+],
+"korrekteAntwort": 0,
+"erklaerung": "flex: 1 sorgt dafür, dass alle Items gleichmäßig den verfügbaren Platz im Container teilen."
+},
+{
+"frage": "Warum funktioniert dieser Abstand zwischen Karten nicht?\n\n.card {\n margin: 10px;\n}\n\n.card-wrap {\n display: flex;\n gap: 10px;\n}\n",
+"antworten": [
+"gap überschreibt margin automatisch",
+"margin funktioniert nicht in Flexbox",
+"beide Eigenschaften sind deaktiviert",
+"Flexbox erlaubt keine Abstände",
+"CSS ignoriert doppelte Abstände nicht automatisch"
+],
+"korrekteAntwort": 0,
+"erklaerung": "gap steuert den Abstand zwischen Flex-Items direkt und macht margin zwischen Items oft überflüssig oder optisch redundant."
+},
+{
+"frage": "Die Karten sollen responsiv umbrechen, tun es aber nicht. Layout:\n\n.card-wrap {\n display: flex;\n}\n\nWas fehlt?",
+"antworten": [
+"flex-grow: 1",
+"flex-direction: column",
+"flex-wrap: wrap",
+"align-items: center",
+"justify-content: space-between"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Ohne flex-wrap bleiben alle Items in einer Zeile, auch wenn kein Platz mehr vorhanden ist."
+},
+{
+"frage": "Warum sind alle Karten in einer sehr engen Reihe gequetscht, obwohl genügend Platz da ist?",
+"antworten": [
+"Weil Flexbox nur eine Karte pro Zeile erlaubt",
+"Weil keine Breitensteuerung wie flex oder width gesetzt ist",
+"Weil HTML falsch strukturiert ist",
+"Weil CSS Grid aktiv ist",
+"Weil Browser Flexbox ignoriert"
+],
+"korrekteAntwort": 1,
+"erklaerung": "Ohne flexible Größenangaben entscheiden Inhalte allein über die Breite der Items, was zu ungleichmäßigen Layouts führen kann."
+},
+{
+"frage": "Was passiert, wenn du bei Kartenlayout flex-direction: column setzt?",
+"antworten": [
+"Die Karten werden horizontal verteilt",
+"Die Karten verschwinden",
+"Die Karten werden vertikal gestapelt statt nebeneinander",
+"Flexbox wird deaktiviert",
+"Nur der erste Card wird angezeigt"
+],
+"korrekteAntwort": 2,
+"erklaerung": "flex-direction: column verändert die Hauptachse und stapelt Items vertikal."
+},
+{
+"frage": "Warum wird bei folgendem Code das Desktop-Layout nicht aktiviert?\n\n@media (min-width: 600px) {\n .header {\n flex-direction: row;\n }\n}\n\nDie Seite bleibt im Mobile-Layout.",
+"antworten": [
+"Media Queries funktionieren nur mit Grid",
+"min-width ist falsch geschrieben",
+"Die Basisklasse überschreibt Media Queries immer",
+"Der Viewport Meta Tag fehlt im HTML",
+"flex-direction funktioniert nicht in Media Queries"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Ohne <meta name=\"viewport\"> wird der Bildschirm auf mobilen Geräten oft nicht korrekt skaliert, wodurch Media Queries nicht wie erwartet greifen."
+},
+{
+"frage": "Was bedeutet Mobile-First in CSS?",
+"antworten": [
+"Desktop wird zuerst programmiert und dann mobil angepasst",
+"Nur mobile Geräte werden unterstützt",
+"Layout beginnt mit kleinen Bildschirmen und wird nach oben erweitert",
+"Flexbox wird nur auf Mobilgeräten genutzt",
+"CSS wird erst im Desktop geladen"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Mobile-first bedeutet, dass das Standardlayout für kleine Bildschirme geschrieben wird und größere Bildschirme per Media Query erweitert werden."
+},
+{
+"frage": "Warum ist @media (min-width: 600px) sinnvoll für Desktop-Layouts?",
+"antworten": [
+"Weil es mobile Geräte deaktiviert",
+"Weil es nur Farben ändert",
+"Weil es kleinere Bildschirme blockiert",
+"Weil es ab einer bestimmten Breite zusätzliche Layoutregeln aktiviert",
+"Weil es Flexbox ersetzt"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Media Queries erlauben unterschiedliche Layouts abhängig von der Bildschirmgröße."
+},
+{
+"frage": "Welche Regel wird angewendet?\n\np { color: red; }\n\n#text { color: blue; }\n\n<p id=\"text\">Hallo</p>",
+"antworten": [
+"Rot, weil CSS immer die erste Regel nimmt",
+"Blau, weil IDs eine höhere Spezifität haben",
+"Rot, weil p-Selector stärker ist",
+"Keine Farbe wird angewendet",
+"Browser wählt zufällig"
+],
+"korrekteAntwort": 1,
+"erklaerung": "ID-Selektoren haben eine höhere Priorität als Element-Selektoren."
+},
+{
+"frage": "Warum wird diese CSS-Regel ignoriert?\n\n.card { color: blue; }\n.container .card { color: red; }",
+"antworten": [
+"Weil CSS keine Mehrfach-Selektoren erlaubt",
+"Weil Farben nicht überschrieben werden können",
+"Weil beide Regeln gleich stark sind",
+"Weil die spezifischere Regel gewinnt",
+"Weil Flexbox aktiv ist"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Je spezifischer ein Selektor ist, desto höher ist seine Priorität."
+},
+{
+"frage": "Was passiert bei !important?",
+"antworten": [
+"Es macht CSS schneller",
+"Es deaktiviert Flexbox",
+"Es überschreibt fast alle anderen Regeln",
+"Es ist nur für Farben erlaubt",
+"Es wird ignoriert"
+],
+"korrekteAntwort": 2,
+"erklaerung": "!important hebt eine Regel über normale Spezifität hinweg an."
+},
+{
+"frage": "Warum funktioniert dieses Layout nicht?\n\n.container {\n grid-template-columns: 1fr 1fr;\n}\n.item {\n display: flex;\n}\n\nAlle Elemente stehen untereinander.",
+"antworten": [
+"Flexbox verhindert Grid",
+"grid-template-columns funktioniert nur mit px",
+"display: grid fehlt im Container",
+"HTML blockiert CSS",
+"Flexbox ist deaktiviert"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Ohne display: grid wird das Grid-Layout nicht aktiviert."
+},
+{
+"frage": "Warum ist dieses Layout kaputt?\n\n.container {\n display: flex;\n justify-content: center;\n}\n.card {\n width: 100%;\n}\n",
+"antworten": [
+"Flexbox funktioniert nicht mit width",
+"justify-content ist falsch geschrieben",
+"Die Karten nehmen den gesamten Platz ein, daher keine Zentrierung sichtbar",
+"Grid fehlt",
+"CSS ist veraltet"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Wenn ein Element 100% Breite hat, gibt es keinen freien Platz für justify-content."
+},
+{
+"frage": "Warum funktioniert dieses Layout nicht richtig?\n\n.card-wrap {\n display: flex;\n}\n.card {\n flex: 1;\n width: 300px;\n}\n",
+"antworten": [
+"Flex und Grid dürfen nicht kombiniert werden",
+"width und flex stehen in Konflikt",
+"Flexbox benötigt Media Queries",
+"gap fehlt zwingend",
+"HTML ist falsch"
+],
+"korrekteAntwort": 1,
+"erklaerung": "Feste width und flex stehen oft in Konkurrenz und führen zu unerwartetem Verhalten."
+},
+{
+"frage": "Was ist der Unterschied zwischen px und %?",
+"antworten": [
+"px ist relativ, % ist absolut",
+"px ist fix, % ist relativ zum Eltern-Element",
+"beide sind identisch",
+"px funktioniert nur in Grid",
+"% funktioniert nur in Flexbox"
+],
+"korrekteAntwort": 1,
+"erklaerung": "Pixel sind feste Werte, Prozent beziehen sich auf das Eltern-Element."
+},
+{
+"frage": "Warum ist fr in CSS Grid besonders?",
+"antworten": [
+"Weil es nur Farben steuert",
+"Weil es feste Pixel ersetzt",
+"Weil es den verfügbaren Restplatz verteilt",
+"Weil es nur für Texte gilt",
+"Weil es HTML ersetzt"
+],
+"korrekteAntwort": 2,
+"erklaerung": "fr verteilt nur den verbleibenden Platz im Grid-Container."
+},
+{
+"frage": "Was passiert bei 200px 1fr 1fr?",
+"antworten": [
+"Alle Spalten sind 200px",
+"Die ersten 200px werden reserviert, Rest wird geteilt",
+"Grid ignoriert px",
+"Alles wird gleich breit",
+"1fr funktioniert nicht mit px"
+],
+"korrekteAntwort": 1,
+"erklaerung": "Feste Werte werden zuerst berechnet, danach wird der Rest mit fr verteilt."
+}
+]
